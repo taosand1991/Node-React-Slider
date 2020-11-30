@@ -1,0 +1,438 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+#root, html{
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.register-user{
+  display: flex;  
+  width: 100%;
+  height: 50vh !important;
+  max-height: 100%;
+  max-width: 600px;
+  padding: 35px;
+  margin: 100px auto;
+  flex-direction: column;
+  background: linear-gradient(45deg, yellow, green) ;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  overflow-y: auto;
+  transition: 1s ease-in-out;
+}
+
+.register-user.swipe{
+  transform: translateX(-200%);
+}
+
+ .register, .login{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  position: absolute;
+  background:linear-gradient(45deg, yellow, green) no-repeat;
+  height: auto;
+  transition: .6s ease-in-out;
+}
+
+.login{
+  right: 100%;
+  opacity: 0;
+}
+
+.register{
+  right: 100%;
+  opacity: 0;
+}
+
+.register.show{
+  right: 0;
+  opacity: 1;
+}
+
+.login.show{
+  right: 0;
+  opacity: 1;
+}
+
+.register-user h5{
+  font-size: 26px;
+  padding: 10px;
+  font-style: italic;
+  font-family: Montserrat, sans-serif;
+}
+.register-user .account-login{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-login span{
+  border: none;
+  appearance: none;
+  outline: none;
+  padding:10px 15px;
+  color: black;
+  font-weight: bold;
+  margin-left: 15px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: .2s linear;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.account-login span:hover{
+  background-color:  rgba(255, 255, 255, 0.9)
+}
+.register-user form{
+  width: 100%;
+}
+
+.register-user form input{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  appearance: none;
+  border: none;
+  outline: none;
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  color: white;
+}
+
+.register-user form button{
+  border: none;
+  outline: none;
+  appearance: none;
+  display: flex;
+  width: 62%;
+  cursor: pointer;
+  flex-direction: column;
+  padding: 10px 20px;
+  background-color: black;
+  margin: 10px auto;
+  color: white;
+  font-size: 18px;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.login form button{
+  background-color: rgba(155, 106, 15, 0.89);
+}
+
+::placeholder{
+  color: whitesmoke;
+}
+
+.login-error{
+  width: 500px;
+  margin: 0 auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: red;
+}
+
+.login-error i, .login-error p{
+  font-size: 21px;
+  color: white;
+}
+
+.create-post{
+  width: 50%;
+  height: 100%;
+  margin: 90px auto;
+  display: flex;
+  transform: translateX(200%);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  transition: all .5s linear;
+  overflow: hidden;
+  overflow-y: auto;
+  background: linear-gradient(30deg, yellow, orange);
+}
+.create-post.swiper{
+  transform: translateX(0);
+}
+
+.create-post .post-form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.create-post .post-form form{
+  width: 100%;
+}
+
+.create-post .post-form form .form-inline{
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 15px auto;
+}
+.create-post .post-form form .form-inline i{
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.form-inline input::placeholder{
+  padding: 10px;
+  color: black;
+  font-size: 18px;
+}
+.create-post .post-form form .form-inline input{
+  width: 100%;
+  padding: 10px 0;
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: transparent;
+}
+.form-inline textarea::placeholder{
+  padding: 10px;
+  color: black;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.create-post .post-form form .form-inline textarea{
+  width: 100%;
+  padding: 15px 0;
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  background: transparent;
+}
+
+ .button-div{
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: black;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+} 
+
+.button-div button{
+  appearance: none;
+  color: white;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.slider-box{
+  display: flex;
+  width: 100%;
+  height: 200px;
+  background-color: grey;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.items-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+}
+.items-box img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.items-box h5{
+  font-size: 45px;
+  color: white;
+}
+
+.items-box:nth-child(2){
+  background-color: red;
+}
+
+.items-box:nth-child(3){
+  background-color: blue;
+}
+
+.dots{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  margin-right: 10px;
+  bottom: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transform: translateY(100px);
+  height: 5px;
+  border: 1px solid white;
+  transition: all .5s ease-in-out;
+}
+
+.dots.active{
+  background-color: white ;
+}
+
+header{
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 100px;
+  z-index: 10;
+  height: 60px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+header .logo{
+  max-width: 300px;
+  padding: 10px;
+  margin-left: 50px;
+}
+
+.logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.left-nav, .right-nav{
+  /* color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 30%;
+  
+}
+
+header .left-nav li::before{
+  bottom: -20px;
+  width: 100%;
+  height: 0;
+  background-color: green;
+  content: '';
+  position: absolute;
+}
+header .right-nav li::before{
+  bottom: -20px;
+  width: 100%;
+  height: 0;
+  background-color: orange;
+  content: '';
+  position: absolute;
+}
+.right-nav li:hover::before{
+  height: 5px;
+}
+
+.left-nav li:hover::before{
+  height: 5px;
+  border-radius: 5px;
+}
+ .left-nav li:hover{
+  color: green;
+}
+
+.right-nav li:hover{
+  color: orange;
+}
+
+.legacy{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-style: italic;
+  font-family: fantasy, sans-serif;
+  display: none;
+}
+
+
+.left-nav li, .right-nav li{
+  list-style-type: none;
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 15px;
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+@media only screen and (max-width:1001px){
+  .left-nav{
+    flex-basis: 100%;
+  }
+  .logo{
+    margin-left: 0;
+    flex-basis: 20%;
+  }
+  .legacy{
+    display: flex;
+    flex-basis: 40%;
+  }
+}
+
+@media only screen and (max-width:991px){
+  .left-nav, .right-nav{
+    display: none;
+  }
+  .legacy{
+    display: flex;
+    flex-basis: 40%;
+  }
+  .register-user{
+    width: auto;
+    margin: 100px 10px;
+  }
+  .create-post{
+    width: auto;
+    margin-top: 60px;
+    height: 100%;
+  }
+}
